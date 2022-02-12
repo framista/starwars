@@ -1,6 +1,7 @@
 import React, { useState, useMemo } from 'react';
+import Select from 'react-select';
 
-import Settings from './components/Settings/Settings';
+import ButtonNavigation from './components/ButtonNavigation/ButtonNavigation';
 import Content from './components/Content/Content';
 
 import { INITIAL_ID, MIN_ID } from './constants/id';
@@ -21,14 +22,30 @@ const App = () => {
     [response, selectedCategories, id]
   );
 
+  const multiSelect = useMemo(
+    () => (
+      <div className="min-w-[100%] py-4">
+        <Select
+          defaultValue={selectedCategories}
+          closeMenuOnSelect={false}
+          onChange={setSelectedCategories}
+          options={CATEGORIES}
+          isMulti
+        />
+      </div>
+    ),
+    [selectedCategories]
+  );
+
   return (
-    <div className="flex justify-center items-center flex-col min-h-screen">
-      <Settings
+    <div className="flex items-center flex-col w-[650px] max-w-[90%] mx-auto mt-[10%]">
+      <ButtonNavigation
         handlersForId={handlersForId}
         id={id}
         selectedCategories={selectedCategories}
         setSelectedCategories={setSelectedCategories}
       />
+      {multiSelect}
       {content}
     </div>
   );
