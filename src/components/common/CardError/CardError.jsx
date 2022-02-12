@@ -1,10 +1,8 @@
 import React from 'react';
 
 export const CardError = () => (
-  <div className="w-[500px] max-w-[90%] bg-white rounded shadow-2xl">
-    <div className="h-[200px] bg-gray-200 rounded-tr rounded-tl flex justify-center items-center">
-      <p className="text-red-500 font-bold">Unexpected problem</p>
-    </div>
+  <div className="w-[100%] min-h-[200px] shadow-2xl bg-gray-200 rounded flex justify-center items-center">
+    <p className="text-red-500 font-bold">Unexpected problem</p>
   </div>
 );
 

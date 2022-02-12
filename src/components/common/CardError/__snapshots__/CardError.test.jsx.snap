@@ -3,17 +3,13 @@
 exports[`CardError should render correctly 1`] = `
 <DocumentFragment>
   <div
-    class="w-[500px] max-w-[90%] bg-white rounded shadow-2xl"
+    class="w-[100%] min-h-[200px] shadow-2xl bg-gray-200 rounded flex justify-center items-center"
   >
-    <div
-      class="h-[200px] bg-gray-200 rounded-tr rounded-tl flex justify-center items-center"
+    <p
+      class="text-red-500 font-bold"
     >
-      <p
-        class="text-red-500 font-bold"
-      >
-        Unexpected problem
-      </p>
-    </div>
+      Unexpected problem
+    </p>
   </div>
 </DocumentFragment>
 `;
