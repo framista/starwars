@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PersonDetail should render correctly 1`] = `
+<DocumentFragment>
+  <div
+    class="capitalize"
+  >
+    name - Luke Skywalker
+  </div>
+</DocumentFragment>
+`;
