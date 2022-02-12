@@ -15,7 +15,7 @@ const App = () => {
     minValue: MIN_ID,
   });
   const [selectedCategories, setSelectedCategories] = useState(CATEGORIES);
-  const response = useFetch(`${STAR_WARS_PEOPLE_URL}/${id}`);
+  const response = useFetch(`${STAR_WARS_PEOPLE_URL}/${id}/`);
 
   const content = useMemo(
     () => Content({ ...response, selectedCategories, id }),
