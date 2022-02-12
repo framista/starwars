@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CardError should render correctly 1`] = `
+<DocumentFragment>
+  <div
+    class="w-[500px] max-w-[90%] bg-white rounded shadow-2xl"
+  >
+    <div
+      class="h-[200px] bg-gray-200 rounded-tr rounded-tl flex justify-center items-center"
+    >
+      <p
+        class="text-red-500 font-bold"
+      >
+        Unexpected problem
+      </p>
+    </div>
+  </div>
+</DocumentFragment>
+`;
