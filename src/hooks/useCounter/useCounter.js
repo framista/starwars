@@ -1,5 +1,5 @@
 import { useMemo, useState } from 'react';
-import { inc, dec, gt, lt } from 'ramda';
+import { inc, dec, max, min } from 'ramda';
 
 const useCounter = (initialValue, options = {}) => {
   const { minValue, maxValue } = options;
@@ -10,13 +10,13 @@ const useCounter = (initialValue, options = {}) => {
       increment: () => {
         setValue((prevValue) => {
           const newValue = inc(prevValue);
-          return gt(newValue, maxValue) ? prevValue : newValue;
+          return min(newValue, maxValue);
         });
       },
       decrement: () => {
         setValue((prevValue) => {
           const newValue = dec(prevValue);
-          return lt(newValue, minValue) ? prevValue : newValue;
+          return max(newValue, minValue);
         });
       },
     }),
