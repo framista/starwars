@@ -1,4 +1,3 @@
-import './App.css';
 import React, { useState, useMemo } from 'react';
 
 import Settings from './components/Settings/Settings';
